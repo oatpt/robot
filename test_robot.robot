@@ -7,7 +7,7 @@ Library           RequestsLibrary
 
 GET /plus/10/20
     ${response}    GET    http://localhost:5001/plus/10/20
-    Should Contain    ${response.content.decode('utf-8')}    30
+    Should Contain    ${response.content.decode('utf-8')}    30.0
 
 GET /plus/0/20
     ${response}    GET    http://localhost:5001/plus/0/20.5
@@ -15,7 +15,7 @@ GET /plus/0/20
 
 GET /plus/10/0
     ${response}    GET    http://localhost:5001/plus/-10/0
-    Should Contain    ${response.content.decode('utf-8')}    -10
+    Should Contain    ${response.content.decode('utf-8')}    -10.0
 
 *** Keywords ***
 
